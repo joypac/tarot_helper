@@ -10,8 +10,5 @@ cartas.local.json
 # Imagens duplicadas pelo build do site
 site/cards-png/
 
-# Binário compilado (reconstrói-se com build.sh)
-bin/
-
 .DS_Store
 site/
