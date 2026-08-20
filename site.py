@@ -340,10 +340,11 @@ def main():
             shutil.rmtree(destino)
         shutil.copytree(IMGS, destino)
 
-    kb = (SAIDA / "index.html").stat().st_size // 1024
+    kb = (saida / "index.html").stat().st_size // 1024
     com_pg = sum(1 for c in cartas if any(s["f"] == "Manual PG" for s in c["secoes"]))
     com_notas = sum(1 for c in cartas if any(s["f"] == "tuas" for s in c["secoes"]))
-    print(f"\n  ✓ {SAIDA / 'index.html'}  ({kb} KB)")
+    print(f"
+  ✓ {saida / 'index.html'}  ({kb} KB)")
     print(f"    {len(cartas)} cartas · {com_pg} com manual PG · {com_notas} com notas tuas")
     print(f"\n  abre com:  open {saida / 'index.html'}\n")
 
