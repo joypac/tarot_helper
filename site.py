@@ -325,13 +325,17 @@ def main():
     if not DADOS.exists():
         sys.exit("  ✗ falta cartas.json — corre ./corpus.py extrair")
     cartas = preparar()
-    SAIDA.mkdir(exist_ok=True)
+    # --raiz: publica na raiz do repo (GitHub Pages só serve / ou /docs)
+    # e usa a pasta de imagens que já lá está, sem duplicar.
+    raiz = "--raiz" in sys.argv
+    saida = RAIZ if raiz else SAIDA
+    saida.mkdir(exist_ok=True)
 
     dados = json.dumps(cartas, ensure_ascii=False).replace("</", "<\\/")
-    (SAIDA / "index.html").write_text(PAGINA.replace("__DADOS__", dados))
+    (saida / "index.html").write_text(PAGINA.replace("__DADOS__", dados))
 
-    if "--sem-copiar" not in sys.argv:
-        destino = SAIDA / "cards-png"
+    if not raiz and "--sem-copiar" not in sys.argv:
+        destino = saida / "cards-png"
         if destino.exists():
             shutil.rmtree(destino)
         shutil.copytree(IMGS, destino)
@@ -341,7 +345,7 @@ def main():
     com_notas = sum(1 for c in cartas if any(s["f"] == "tuas" for s in c["secoes"]))
     print(f"\n  ✓ {SAIDA / 'index.html'}  ({kb} KB)")
     print(f"    {len(cartas)} cartas · {com_pg} com manual PG · {com_notas} com notas tuas")
-    print(f"\n  abre com:  open {SAIDA / 'index.html'}\n")
+    print(f"\n  abre com:  open {saida / 'index.html'}\n")
 
 
 if __name__ == "__main__":
