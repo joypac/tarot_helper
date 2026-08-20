@@ -12,3 +12,7 @@ site/cards-png/
 
 .DS_Store
 site/
+
+# Cache do Python
+__pycache__/
+*.pyc
