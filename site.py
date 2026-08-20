@@ -177,7 +177,7 @@ mark { background: var(--realce); color: var(--papel); padding: 0 .15em; border-
 </head>
 <body>
 <header><div class="topo">
-  <h1><a href="#">Dicionário de Tarot</a></h1>
+  <h1><a href="#" id="inicio">Dicionário de Tarot</a></h1>
   <input id="busca" type="search" placeholder="Procurar carta, símbolo, tema..." autocomplete="off">
   <div class="filtros" id="filtros"></div>
 </div></header>
@@ -201,12 +201,29 @@ function realcar(txt, termo) {
 
 document.getElementById('filtros').innerHTML = FILTROS.map(f =>
   `<button data-f="${f}" aria-pressed="${f === filtro}">${f}</button>`).join('');
-document.getElementById('filtros').onclick = e => {
-  const b = e.target.closest('button'); if (!b) return;
-  filtro = b.dataset.f;
+/* Voltar ao índice a partir de qualquer sítio, incluindo de dentro de uma
+   carta. Limpar o hash dispara hashchange e o render vem daí; mas se já
+   estivermos no índice o hash não muda, não há evento, e é preciso
+   desenhar à mão. Era isto que deixava os atalhos do topo sem efeito. */
+function irIndice() {
+  if (location.hash && location.hash !== '#') location.hash = '';
+  else render();
+}
+
+function aplicarFiltro(f) {
+  filtro = f;
   document.querySelectorAll('#filtros button').forEach(x =>
     x.setAttribute('aria-pressed', x.dataset.f === filtro));
-  if (!location.hash.startsWith('#/c/')) render();
+  irIndice();
+}
+
+document.getElementById('filtros').onclick = e => {
+  const b = e.target.closest('button');
+  if (b) aplicarFiltro(b.dataset.f);
+};
+
+document.getElementById('inicio').onclick = e => {
+  e.preventDefault(); busca.value = ''; aplicarFiltro('Tudo');
 };
 
 function correspondem() {
@@ -297,23 +314,25 @@ function render() {
   m ? ficha(m[1]) : grelha();
 }
 
-busca.oninput = () => { if (location.hash.startsWith('#/c/')) location.hash = ''; else grelha(); };
+busca.oninput = irIndice;
 app.addEventListener('click', e => {
   const b = e.target.closest('.chips button'); if (!b) return;
-  busca.value = b.dataset.termo; filtro = 'Tudo';
-  document.querySelectorAll('#filtros button').forEach(x =>
-    x.setAttribute('aria-pressed', x.dataset.f === 'Tudo'));
-  location.hash = ''; grelha();
+  busca.value = b.dataset.termo;
+  aplicarFiltro('Tudo');
 });
 addEventListener('hashchange', render);
 addEventListener('keydown', e => {
-  if (document.activeElement === busca) { if (e.key === 'Escape') busca.blur(); return; }
+  if (document.activeElement === busca) {
+    if (e.key === 'Escape') { busca.value = ''; busca.blur(); irIndice(); }
+    return;
+  }
   if (e.key === '/') { e.preventDefault(); busca.focus(); return; }
+  if (e.key === 'Escape') { irIndice(); return; }
   const m = location.hash.match(/^#\\/c\\/(.+)$/); if (!m) return;
   const i = CARTAS.findIndex(c => c.id === m[1]);
   if (e.key === 'ArrowLeft') location.hash = '#/c/' + CARTAS[(i - 1 + CARTAS.length) % CARTAS.length].id;
   if (e.key === 'ArrowRight') location.hash = '#/c/' + CARTAS[(i + 1) % CARTAS.length].id;
-  if (e.key === 'Escape') location.hash = '';
+
 });
 render();
 </script>
