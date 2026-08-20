@@ -1,0 +1,96 @@
+# Cartas
+
+Fonte: A. E. Waite, *The Pictorial Key to the Tarot* (1911), domínio público.
+
+## Arcanos Maiores
+
+-  0. [The Fool](00-the-fool.md)
+-  1. [The Magician](01-the-magician.md)
+-  2. [The High Priestess](02-the-high-priestess.md)
+-  3. [The Empress](03-the-empress.md)
+-  4. [The Emperor](04-the-emperor.md)
+-  5. [The Hierophant](05-the-hierophant.md)
+-  6. [The Lovers](06-the-lovers.md)
+-  7. [The Chariot](07-the-chariot.md)
+-  8. [Strength, or Fortitude](08-strength-or-fortitude.md)
+-  9. [The Hermit](09-the-hermit.md)
+- 10. [Wheel of Fortune](10-wheel-of-fortune.md)
+- 11. [Justice](11-justice.md)
+- 12. [The Hanged Man](12-the-hanged-man.md)
+- 13. [Death](13-death.md)
+- 14. [Temperance](14-temperance.md)
+- 15. [The Devil](15-the-devil.md)
+- 16. [The Tower](16-the-tower.md)
+- 17. [The Star](17-the-star.md)
+- 18. [The Moon](18-the-moon.md)
+- 19. [The Sun](19-the-sun.md)
+- 20. [The Last Judgment](20-the-last-judgment.md)
+- 21. [The World](21-the-world.md)
+
+## Paus
+
+- [Ace of Wands](pau-01-ace-of-wands.md)
+- [Two of Wands](pau-02-two-of-wands.md)
+- [Three of Wands](pau-03-three-of-wands.md)
+- [Four of Wands](pau-04-four-of-wands.md)
+- [Five of Wands](pau-05-five-of-wands.md)
+- [Six of Wands](pau-06-six-of-wands.md)
+- [Seven of Wands](pau-07-seven-of-wands.md)
+- [Eight of Wands](pau-08-eight-of-wands.md)
+- [Nine of Wands](pau-09-nine-of-wands.md)
+- [Ten of Wands](pau-10-ten-of-wands.md)
+- [Page of Wands](pau-11-page-of-wands.md)
+- [Knight of Wands](pau-12-knight-of-wands.md)
+- [Queen of Wands](pau-13-queen-of-wands.md)
+- [King of Wands](pau-14-king-of-wands.md)
+
+## Copas
+
+- [Ace of Cups](cop-01-ace-of-cups.md)
+- [Two of Cups](cop-02-two-of-cups.md)
+- [Three of Cups](cop-03-three-of-cups.md)
+- [Four of Cups](cop-04-four-of-cups.md)
+- [Five of Cups](cop-05-five-of-cups.md)
+- [Six of Cups](cop-06-six-of-cups.md)
+- [Seven of Cups](cop-07-seven-of-cups.md)
+- [Eight of Cups](cop-08-eight-of-cups.md)
+- [Nine of Cups](cop-09-nine-of-cups.md)
+- [Ten of Cups](cop-10-ten-of-cups.md)
+- [Page of Cups](cop-11-page-of-cups.md)
+- [Knight of Cups](cop-12-knight-of-cups.md)
+- [Queen of Cups](cop-13-queen-of-cups.md)
+- [King of Cups](cop-14-king-of-cups.md)
+
+## Espadas
+
+- [Ace of Swords](esp-01-ace-of-swords.md)
+- [Two of Swords](esp-02-two-of-swords.md)
+- [Three of Swords](esp-03-three-of-swords.md)
+- [Four of Swords](esp-04-four-of-swords.md)
+- [Five of Swords](esp-05-five-of-swords.md)
+- [Six of Swords](esp-06-six-of-swords.md)
+- [Seven of Swords](esp-07-seven-of-swords.md)
+- [Eight of Swords](esp-08-eight-of-swords.md)
+- [Nine of Swords](esp-09-nine-of-swords.md)
+- [Ten of Swords](esp-10-ten-of-swords.md)
+- [Page of Swords](esp-11-page-of-swords.md)
+- [Knight of Swords](esp-12-knight-of-swords.md)
+- [Queen of Swords](esp-13-queen-of-swords.md)
+- [King of Swords](esp-14-king-of-swords.md)
+
+## Ouros
+
+- [Ace of Pentacles](our-01-ace-of-pentacles.md)
+- [Two of Pentacles](our-02-two-of-pentacles.md)
+- [Three of Pentacles](our-03-three-of-pentacles.md)
+- [Four of Pentacles](our-04-four-of-pentacles.md)
+- [Five of Pentacles](our-05-five-of-pentacles.md)
+- [Six of Pentacles](our-06-six-of-pentacles.md)
+- [Seven of Pentacles](our-07-seven-of-pentacles.md)
+- [Eight of Pentacles](our-08-eight-of-pentacles.md)
+- [Nine of Pentacles](our-09-nine-of-pentacles.md)
+- [Ten of Pentacles](our-10-ten-of-pentacles.md)
+- [Page of Pentacles](our-11-page-of-pentacles.md)
+- [Knight of Pentacles](our-12-knight-of-pentacles.md)
+- [Queen of Pentacles](our-13-queen-of-pentacles.md)
+- [King of Pentacles](our-14-king-of-pentacles.md)

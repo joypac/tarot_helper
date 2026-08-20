@@ -1,0 +1,16 @@
+# Textos-fonte: os livros ficam locais, não se redistribuem.
+# As duas fichas de síntese são conteúdo próprio do guia e vão para o repo.
+fontes/*
+!fontes/Dicionario Tarot - Arcanos Maiores.txt
+!fontes/Dicionario Tarot - Arcanos Menores.txt
+
+# Camada local: manual PG (material de terceiros)
+cartas.local.json
+
+# Imagens duplicadas pelo build do site
+site/cards-png/
+
+# Binário compilado (reconstrói-se com build.sh)
+bin/
+
+.DS_Store

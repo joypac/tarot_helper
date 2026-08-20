@@ -1,0 +1,5 @@
+# WANDS — Seven
+
+WANDS Seven A young man on a craggy eminence brandishing a staff; six other staves are raised towards him from below. Divinatory Meanings : It is a card of valour, for, on the surface, six are attacking one, who has, however, the vantage position. On the intellectual plane, it signifies discussion, wordy strife; in business— negotiations, war of trade, barter, competition. It is further a card of success, for the combatant is on the top and his enemies may be unable to reach him. Reversed : Perplexity, embarrassments, anxiety. It is also a caution against indecision.
+
+Six of Wands
